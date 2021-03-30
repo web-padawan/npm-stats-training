@@ -8,11 +8,11 @@ The goal of this assignment is to become familiar with some of our projects and 
 
 The project is a dashboard to show npm downloads statistics for Vaadin components.
 You will need to load the data from JSON endpoints and create some visualization
-using Vaadin Design System.
+using web components from the Vaadin Design System.
 
 Some recommendations:
 
-1. Please organize the process as if you are working on the actual real world application.
+1. Please organize the workflow as if you are assigned to build the actual real world application.
 2. When you start a project, create a new repository and invite your technical mentor to join.
 3. Please split your code into small PRs and assign your technical mentor as a reviewer.
 
@@ -29,6 +29,12 @@ Please use the following parts of Vaadin to implement the app:
 - [Vaadin Design System](https://vaadin.com/docs/latest/ds/overview) as a UI component library
 - [Vaadin Router](https://vaadin.com/docs/latest/fusion/routing/router) for navigating between pages
 
+You can install the latest versions of web components and router by using:
+
+```sh
+npm install @vaadin/vaadin@next
+```
+
 Additionally, you will need to use a set of tools in your app:
 
 - [Web Dev Server](https://modern-web.dev/docs/dev-server/overview/) for local development
@@ -38,10 +44,11 @@ Additionally, you will need to use a set of tools in your app:
 
 ## 4. UI structure
 
-Below you will find a description and screenshots of the UI to give you the overall impression.
-You can also find the HTML files in the `mockup` folder.
+Below you will find a description and screenshots of the application UI mockups.
 
 Please use Vaadin Design System and follow its guidelines to pick the components that you need.
+You can also find the HTML files in the `mockup` folder somewhat useful as a hint on what type
+of components to use.
 
 ### Layout
 
