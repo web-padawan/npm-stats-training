@@ -6,7 +6,8 @@ The goal of this assignment is to become familiar with some of our projects and 
 ## 1. General
 
 The project is a dashboard to show npm downloads statistics for Vaadin components.
-You will need to load the data from JSON endpoints and create some visualization.
+You will need to load the data from JSON endpoints and create some visualization
+using Vaadin Design System.
 
 ## 2. Project setup
 
@@ -187,7 +188,8 @@ Please write unit tests at least for the following components:
 #### Visual tests
 
 Please write visual regression tests for several components.
-Use SauceLabs (ask your mentor to provide you credentials).
+
+Use Web Test Runner and SauceLabs (ask your mentor to provide you access credentials).
 
 ### Deploy
 
