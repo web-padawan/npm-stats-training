@@ -64,6 +64,8 @@ The overview page should display the following content:
 
 #### Date range selector
 
+The date range selector needs to be a **reusable web component** shared by the two views.
+
 There should be a form with 3 fields:
 
 - select a pre-defined date range (last 2 weeks, last 4 weeks) or a custom range
