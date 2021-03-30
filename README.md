@@ -2,19 +2,29 @@
 
 Welcome! It's time for your first project exercise at Vaadin.
 
-The goal of this assignment is to become familiar with some of our projects and tools that we use.
+The goal of this assignment is to become familiar with some of the projects that we build, and tools
+that we use.
+
+Even though we believe you are experienced developer, we suggest you to spend at least a few days on
+the training project before you switch to the real tasks. Consider this as a chance to learn and to
+build something useful.
+
+If you like the idea of doing such small hobby projects that help you to switch context and at the
+same time could benefit our team and our community, excellent! That's exactly why we have
+Community Focus time at Vaadin.
 
 ## 1. General
 
-The project is a dashboard to show npm downloads statistics for Vaadin components.
-You will need to load the data from JSON endpoints and create some visualization
-using web components from the Vaadin Design System.
+The project is a single page application to show npm downloads statistics for Vaadin components.
+You will need to load the data from JSON endpoints and visualize it using web components from the
+Vaadin Design System.
 
 Some recommendations:
 
 1. Please organize the workflow as if you are assigned to build the actual real world application.
 2. When you start a project, create a new repository and invite your technical mentor to join.
 3. Please split your code into small PRs and assign your technical mentor as a reviewer.
+4. If you feel that our [documentation](https://vaadin.com/docs/latest/) is confusing or incomplete, please let the team know!
 
 ## 2. Project setup
 
@@ -95,7 +105,9 @@ There should be a field with autocomplete and a list of suggestions.
 - After the data is loaded, the chart and data table are updated (see below).
 - After the data for component is updated, the field should be cleared.
 
-There should be a progress indicator visible while data is loaded.
+#### Progress indicator
+
+There should be a progress indicator visible while component's data is loaded.
 
 #### Downloads chart
 
