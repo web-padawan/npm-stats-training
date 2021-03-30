@@ -1,6 +1,7 @@
 # npm stats learning project
 
 Welcome! It's time for your first project exercise at Vaadin.
+
 The goal of this assignment is to become familiar with some of our projects and tools that we use.
 
 ## 1. General
@@ -8,6 +9,12 @@ The goal of this assignment is to become familiar with some of our projects and 
 The project is a dashboard to show npm downloads statistics for Vaadin components.
 You will need to load the data from JSON endpoints and create some visualization
 using Vaadin Design System.
+
+Some recommendations:
+
+1. Please organize the process as if you are working on the actual real world application.
+2. When you start a project, create a new repository and invite your technical mentor to join.
+3. Please split your code into small PRs and assign your technical mentor as a reviewer.
 
 ## 2. Project setup
 
