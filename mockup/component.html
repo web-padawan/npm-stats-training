@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vaadin stats</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="sidebar">
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">Overview</a>
+            </li>
+            <details>
+              <summary>Components</summary>
+              <ul>
+                <li>
+                  <a href="#">Button</a>
+                </li>
+                <li>
+                  <a href="#">Checkbox</a>
+                </li>
+                <li>
+                  <a href="#">Combo-box</a>
+                </li>
+                <li>
+                  <a href="#">Context-menu</a>
+                </li>
+              </ul>
+            </details>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <header class="header">
+          <button>+</button>
+          <h1>Vaadin stats</h1>
+        </header>
+        <main class="main">
+          <h2 class="title">Component: vaadin-button</h2>
+          <div class="version-selector">
+            <label>
+              Select range
+              <select>
+                <option>Last 2 weeks</option>
+                <option>Last 4 weeks</option>
+                <option selected>Custom range...</option>
+              </select>
+            </label>
+            <label>
+              From
+              <input type="date" value="2021-03-01" />
+            </label>
+            <label>
+              To
+              <input type="date" value="2021-03-28" />
+            </label>
+          </div>
+          <div class="threshold-selector">
+            <label>
+              Downloads threshold
+              <input value="300" />
+            </label>
+          </div>
+          <div class="chart">
+            <h3>Downloads</h3>
+            <img src="area-chart.png" width="800" />
+          </div>
+          <div class="table">
+            <table>
+              <tr>
+                <th>Version</th>
+                <th>01/03</th>
+                <th>08/03</th>
+                <th>15/03</th>
+                <th>22/03</th>
+              </tr>
+              <tr>
+                <td>3.0.0</td>
+                <td>439</td>
+                <td>1110</td>
+                <td>1357</td>
+                <td>1196</td>
+              </tr>
+              <tr>
+                <td>2.5.0</td>
+                <td>10960</td>
+                <td>10568</td>
+                <td>11065</td>
+                <td>11407</td>
+              </tr>
+              <tr>
+                <td>2.4.0</td>
+                <td>980</td>
+                <td>1045</td>
+                <td>878</td>
+                <td>1098</td>
+              </tr>
+              <tr>
+                <td>2.3.0</td>
+                <td>2340</td>
+                <td>2249</td>
+                <td>2223</td>
+                <td>2170</td>
+              </tr>
+              <tr>
+                <td>2.2.10</td>
+                <td>1394</td>
+                <td>1418</td>
+                <td>1281</td>
+                <td>1465</td>
+              </tr>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .app {
+        display: flex;
+        height: 100%;
+      }
+
+      .sidebar {
+        width: 250px;
+        border-right: solid 1px #ccc;
+      }
+
+      .sidebar ul li {
+        margin: 16px 0;
+      }
+
+      .header {
+        display: flex;
+        padding: 16px;
+        border-bottom: solid 1px #ccc;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .header button {
+        width: 28px;
+        height: 28px;
+        margin-right: 16px;
+      }
+
+      .main {
+        padding: 16px;
+      }
+
+      .version-selector,
+      .threshold-selector {
+        margin-bottom: 16px;
+      }
+
+      .version-selector > * {
+        margin-right: 16px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin: 0 0 16px;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin: 16px 0;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        border: solid 1px #e2e2e2;
+      }
+    </style>
+  </body>
+</html>

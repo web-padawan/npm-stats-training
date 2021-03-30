@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vaadin stats</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="sidebar">
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">Overview</a>
+            </li>
+            <details>
+              <summary>Components</summary>
+              <ul>
+                <li>
+                  <a href="#">Button</a>
+                </li>
+                <li>
+                  <a href="#">Checkbox</a>
+                </li>
+                <li>
+                  <a href="#">Combo-box</a>
+                </li>
+                <li>
+                  <a href="#">Context-menu</a>
+                </li>
+              </ul>
+            </details>
+          </ul>
+        </nav>
+      </div>
+      <div class="content">
+        <header class="header">
+          <button>+</button>
+          <h1>Vaadin stats</h1>
+        </header>
+        <main class="main">
+          <div class="version-selector">
+            <label>
+              Select range
+              <select>
+                <option>Last 2 weeks</option>
+                <option>Last 4 weeks</option>
+                <option selected>Custom range...</option>
+              </select>
+            </label>
+            <label>
+              From
+              <input type="date" value="2021-02-01" />
+            </label>
+            <label>
+              To
+              <input type="date" value="2021-03-28" />
+            </label>
+          </div>
+          <div class="component-selector">
+            <label>
+              Add component
+              <input placeholder="Enter tag name..." />
+            </label>
+          </div>
+          <div class="chart">
+            <h3>Downloads</h3>
+            <img src="line-chart.png" width="800" />
+          </div>
+          <div class="table">
+            <table>
+              <tr>
+                <th rowspan="2"><input type="checkbox" checked /></th>
+                <th rowspan="2">Component</th>
+                <th colspan="3">Downloads</th>
+              </tr>
+              <tr>
+                <td>Selected range</td>
+                <td>Last 7 days</td>
+                <td>All the time</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked /></td>
+                <td>Button</td>
+                <td>16574</td>
+                <td>7874</td>
+                <td>49272</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked /></td>
+                <td>Checkbox</td>
+                <td>21784</td>
+                <td>8453</td>
+                <td>53458</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked /></td>
+                <td>Combo-box</td>
+                <td>19756</td>
+                <td>7985</td>
+                <td>50487</td>
+              </tr>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .app {
+        display: flex;
+        height: 100%;
+      }
+
+      .sidebar {
+        width: 250px;
+        border-right: solid 1px #ccc;
+      }
+
+      .sidebar ul li {
+        margin: 16px 0;
+      }
+
+      .header {
+        display: flex;
+        padding: 16px;
+        border-bottom: solid 1px #ccc;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .header button {
+        width: 28px;
+        height: 28px;
+        margin-right: 16px;
+      }
+
+      .main {
+        padding: 16px;
+      }
+
+      .version-selector,
+      .component-selector {
+        margin-bottom: 16px;
+      }
+
+      .version-selector > * {
+        margin-right: 16px;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin: 16px 0;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        border: solid 1px #e2e2e2;
+      }
+    </style>
+  </body>
+</html>
