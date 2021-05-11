@@ -52,13 +52,29 @@ Additionally, you will need to use a set of tools in your app:
 - [ESLint and Prettier](https://open-wc.org/guides/tools/linting-and-formatting/) for linting and formatting
 - [Rollup](https://open-wc.org/docs/building/rollup/) to bundle for production
 
-## 4. UI structure
+## 4. First component
 
-Below you will find a description and screenshots of the application UI mockups.
+Please start by creating a `<date-range-selector>` **reusable web component** shared by different parts of the UI.
 
-Please use Vaadin Design System and follow its guidelines to pick the components that you need.
-You can also find the HTML files in the `mockup` folder somewhat useful as a hint on what type
-of components to use.
+There should be a form with 3 fields:
+
+- select a pre-defined date range (last 2 weeks, last 4 weeks) or a custom range
+- select a "from" date as a custom range start
+- select a "to" date as a custom range end
+
+Note:
+
+- "From" and "To" fields should be disabled if a pre-defined range is selected.
+- It shouldn't be possible to select invalid range (e.g. start date is after end).
+- Regardless of chosen day of week, the range should start on that week's Monday.
+
+## 5. UI structure
+
+Below you will find a general description and screenshots of the application UI mockups.
+
+1. Please use Vaadin Design System and follow its guidelines to pick the components that you need.
+2. Use the HTML files in the `mockup` folder useful as a hint on which components to choose.
+3. You **don't have to implement the whole application**. Please focus on trying different components.
 
 ### Layout
 
@@ -81,19 +97,7 @@ The overview page should display the following content:
 
 #### Date range selector
 
-The date range selector needs to be a **reusable web component** shared by the two views.
-
-There should be a form with 3 fields:
-
-- select a pre-defined date range (last 2 weeks, last 4 weeks) or a custom range
-- select a "from" date as a custom range start
-- select a "to" date as a custom range end
-
-Note:
-
-- "From" and "To" fields should be disabled if a pre-defined range is selected.
-- It shouldn't be possible to select invalid range (e.g. start date is after end).
-- Regardless of chosen day of week, the range should start on that week's Monday.
+Please use the `<date-range-selector>` component that you created in this view.
 
 #### Component selector
 
@@ -104,10 +108,6 @@ There should be a field with autocomplete and a list of suggestions.
 - Selecting a component imports the data for it by fetching a JSON API.
 - After the data is loaded, the chart and data table are updated (see below).
 - After the data for component is updated, the field should be cleared.
-
-#### Progress indicator
-
-There should be a progress indicator visible while component's data is loaded.
 
 #### Downloads chart
 
@@ -140,13 +140,9 @@ Every component's page should display the following content:
 
 The title should contain a component and match the active link in the Sidebar.
 
-#### Progress indicator
-
-There should be a progress indicator visible while component's data is loaded.
-
 #### Date range selector
 
-This component should be identical to the one in the Overview page.
+Please use the `<date-range-selector>` component that you created in this view.
 
 When a new date range is selected, chart and the data table is updated.
 
@@ -199,26 +195,8 @@ Every route should have a corresponding link from the sidebar.
 
 ### State
 
-Please make sure your app has some basic state management:
-
-- Version range should be the same for Overview and Component pages
-- Downloads data should be cached and reused by Overview and Components views
+You don't have to use any state management, it's enough to keep data in properties.
 
 ### Tests
 
-#### Unit tests
-
-Please write unit tests at least for the following components:
-
-1. Date range selector
-2. Component chart and data table
-
-#### Visual tests
-
-Please write visual regression tests for several components.
-
-Use Web Test Runner and SauceLabs (ask your mentor to provide you access credentials).
-
-### Deploy
-
-Build your app for production and deploy to a free hosting e.g. Netlify.
+Please write unit tests for the `<date-range-selector>` component.
